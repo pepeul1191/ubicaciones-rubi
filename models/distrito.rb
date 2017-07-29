@@ -14,4 +14,20 @@ class Distrito < Model
       @db.disconnect
       rpta
 	end
+
+	def crear(nombre, provincia_id)
+		rpta = @db[:distritos].insert(:nombre => nombre, :provincia_id => provincia_id)
+		@db.disconnect
+		rpta 
+   end
+
+   def editar(id, nombre)
+      @db[:distritos].where('id', id).update(:nombre => nombre)
+      @db.disconnect
+   end
+
+   def eliminar(id)
+      @db[:distritos].where('id', id).delete
+      @db.disconnect
+   end
 end
