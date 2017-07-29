@@ -4,7 +4,6 @@ source "https://rubygems.org"
 gem "rack", "1.5.2"
 gem "sinatra", "1.4.3"
 gem "builder", "~> 3.0.0"
-gem "haml"
 gem "bson", "= 1.3.1"
 gem "bson_ext", "= 1.3.1"
 gem "sinatra-flash"
@@ -20,6 +19,8 @@ gem "awesome_print", :require => 'ap'
 gem "cucumber"
 gem "resque"
 gem "puma"
+gem "sqlite3"
+gem "mysql2"
 gem "sequel"
 
 group :development do
