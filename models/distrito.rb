@@ -8,4 +8,10 @@ class Distrito < Model
 		@db.disconnect
 		rpta 
 	end
+
+	def buscar(nombre)
+		rpta = @db[:vw_distrito_provincia_departamento].where(Sequel.like(:nombre, nombre + '%')).limit(10).to_a
+      @db.disconnect
+      rpta
+	end
 end
