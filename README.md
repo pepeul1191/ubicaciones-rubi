@@ -11,6 +11,7 @@ Basado en boilerplate wixel de Sinatra. Gestión de las ubicaciones (departament
 	+ get - departamento/listar
 	+ get - provincia/listar/:departamento_id
 	+ get - distrito/listar/:provincia_id
+	+ get - distrito/buscar?nombre={$nombre}
 
 # Fuentes:
 
